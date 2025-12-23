@@ -1,6 +1,6 @@
 import './DetailsToShow.css'
 import Button from '@mui/material/Button';
-import GlobalState from '../global/globalState';
+import GlobalState from '../global/GlobalState';
 import { observer } from 'mobx-react';
 import BusinessDetailsStore from '../global/BusinessDetailsStore';
 import { useEffect } from "react";

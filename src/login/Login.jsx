@@ -7,7 +7,7 @@ import { PasswordSharp } from '@mui/icons-material';
 import  { useState } from "react";
 import Swal from 'sweetalert2'
 import { observer } from 'mobx-react';
-import GlobalState from '../global/globalState';
+import GlobalState from '../global/GlobalState';
 
 
 const Login = (observer(()=> {

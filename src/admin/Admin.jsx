@@ -2,7 +2,7 @@ import './Admin.css'
 import DetailsToEdit from '../detailsToEdit/DetailsToEdit'
 import DetailsToShow from '../detailsToShow/DetailsToShow'
 import Login from '../login/Login'
-import GlobalState from '../global/globalState';
+import GlobalState from '../global/GlobalState';
 import { observer } from 'mobx-react';
 import Button from '@mui/material/Button';
 import { Outlet, Link } from "react-router-dom";
