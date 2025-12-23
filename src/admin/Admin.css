@@ -1,0 +1,42 @@
+
+body{
+    background-color: #fffef4;
+    color: #544541;
+}
+#detailsToShow{
+    border-bottom: solid 2px   #544541;
+    /* position: absolute; */
+    position: fixed;
+    top: 0%;
+    left: 0%;
+   width:100vw;
+   z-index:1000;
+   background-color: #fffef4;
+}
+.b1{
+   
+    border: solid 3px #dec071;
+    background-color:#fffef4 ;
+  
+  
+}
+.b1:hover{
+    border: solid 3px#544541 ;
+    color:#dec071 ;
+}
+.link{
+    color:#544541;
+   
+}
+.link:hover{
+    color:#dec071 ;
+}
+#buttens{
+   position: fixed ;
+    top: 19vw;
+    background-color: #fffef4;
+    left: 0%;
+    right: 0%;
+
+}
+

@@ -1,0 +1,13 @@
+body {
+    background-color: #fffef4;
+
+}
+
+#meetings {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fffef4;
+    position: fixed;
+    top: 25vw;
+    left:10vw;
+}

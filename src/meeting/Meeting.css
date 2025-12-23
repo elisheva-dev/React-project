@@ -1,0 +1,16 @@
+.meeting{
+    margin: 1vw;
+padding: 1vw;
+background-color:#fffef4 ;
+
+}
+.red{
+    border: solid 0.5vw rgb(255, 122, 122);
+  }
+  .orange{
+    border: solid 0.5vw rgb(254, 179, 104);
+  }
+  .green{
+    border: solid 0.5vw  rgb(120, 249, 106);
+
+  }
