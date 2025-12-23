@@ -55,7 +55,9 @@ Open http://localhost:5173 to view the app in your browser.
 
 ### Admin Users
 
-- Log in to access **edit mode**.  
+- Navigate to **`/admin`** to access admin mode.  
+- **Username:** `admin`  
+- **Password:** `123456`  
 - Edit business details (**logo, name, address, phone, owners**).  
 - Add and manage **services**.  
 - Manage **meetings**.  
