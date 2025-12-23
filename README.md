@@ -47,7 +47,7 @@ npm start
 ```
 ## 🚀 Run Locally
 
-Open (http://localhost:5173) to view the app in your browser.  
+Open http://localhost:5173 to view the app in your browser.  
 
 ---
 
@@ -70,7 +70,7 @@ Open (http://localhost:5173) to view the app in your browser.
 ## 🌐 Live Demo
 
 The app is hosted online:  
-(https://react-project-1fe7.onrender.com/)
+https://react-project-1fe7.onrender.com
 ---
 
 ## 🤝 Contributing
