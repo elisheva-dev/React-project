@@ -44,7 +44,7 @@ git clone https://github.com/elisheva-dev/React-project.git
 cd React-project
 npm install
 npm start
-
+```bash
 ## 🚀 Run Locally
 
 Open (http://localhost:5173) to view the app in your browser.  
