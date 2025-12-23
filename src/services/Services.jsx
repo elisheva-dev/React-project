@@ -12,7 +12,7 @@ import Fab from '@mui/material/Fab';
 import './Services.css'
 import Service from '../service/Service';
 import ServicesStore from '../global/ServicesStore'
-import GlobalState from '../global/globalState';
+import GlobalState from '../global/GlobalState';
 
 const Services = (observer(() => {
     useEffect(() => {
