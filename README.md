@@ -40,16 +40,14 @@
 Clone the repository and install dependencies:
 
 ```bash
-git clone https://github.com/your-username/client-repo.git
-cd client-repo
+git clone https://github.com/elisheva-dev/React-project.git
+cd React-project
 npm install
 npm start
 
 ## 🚀 Run Locally
 
 Open (http://localhost:5173) to view the app in your browser.  
-
-> ⚠️ Make sure the backend API is running separately.
 
 ---
 
