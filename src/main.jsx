@@ -9,35 +9,27 @@ import './index.css'
 import User from './user/User.jsx'
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <User />
-
-  },
-  {
-    path: '/admin',
-    element: <Admin />,
-    errorElement: <div>error contants</div>,
+    path: '/',
+    element: <App />,      
     children: [
+      { index: true, element: <User /> },  // "/" יציג User
       {
-        path: 'services',
-        element: <Services/>,
-        errorElement: <div>error contant not found</div>
-      },
-      {
-        path: 'meetings',
-        element:<Meetings/>,
-        errorElement: <div>error contant not found</div>
+        path: 'admin',
+        element: <Admin />,
+        children: [
+          { path: 'services', element: <Services /> },
+          { path: 'meetings', element: <Meetings /> }
+        ]
       }
     ]
-  },
-  
-
+  }
 ]);
+
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-     <RouterProvider router={router} />
+    <RouterProvider router={router} />
     <App />
   </React.StrictMode>,
 )
