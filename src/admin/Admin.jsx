@@ -4,43 +4,41 @@ import DetailsToShow from '../detailsToShow/DetailsToShow'
 import Login from '../login/Login'
 import GlobalState from '../global/GlobalState';
 import { observer } from 'mobx-react';
-import Button from '@mui/material/Button';
-import { Outlet, Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import BusinessDetailsStore from '../global/BusinessDetailsStore';
+import { useState } from "react";
+import Services from '../services/Services'
+import Meetings from '../meetings/Meetings'
 
+const Admin = observer(() => {
+  const [showServices, setShowServices] = useState(false);
 
-const Admin = (observer(() => {
+  if (!GlobalState.isAdmin) return <Login />;
+
   return (
     <>
-      {!GlobalState.isAdmin ?
-        <Login></Login> :
-        <div>
-          <header id="detailsToShow">
-            {!BusinessDetailsStore.isForEdit ?
-              <DetailsToShow />
-              : <DetailsToEdit />
-            }
-          </header>
-          {!GlobalState.isMeetingOpen && !GlobalState.isServiceOpen ?
-            <div id="buttens">
-              <Button variant="outlined" class="b1"><Link to="./services" className='link' onClick={() => GlobalState.setIsServiceOpen(true)}>services</Link></Button>
-              <Button variant="outlined " class="b1" ><Link to="./meetings" className='link' onClick={() => GlobalState.setIsMeetingOpen(true)}>meeting</Link></Button>
-              <Outlet />
-            </div> :
-            GlobalState.isMeetingOpen ?
-              <div id="buttens">
-                <Button variant="outlined" class="b1"><Link to="./services" className='link' onClick={() => GlobalState.setIsServiceOpen(true)}>services</Link></Button>
-                <Outlet />
-              </div> :
-              <div id="buttens">
-                <Button variant="outlined" class="b1"><Link to="./meetings" className='link' onClick={() => GlobalState.setIsMeetingOpen(true)}>meeting</Link></Button>
-                <Outlet />
-              </div>
+      <div>
+        <header>
+          {!BusinessDetailsStore.isForEdit ?
+            <DetailsToShow />
+            : <DetailsToEdit />
           }
-        </div>
+        </header>
+      
 
-      }
+          <div id="buttons">
+
+            <button className="button btn" onClick={() => setShowServices(true)}>Services</button>
+            <button className="button btn" onClick={() => setShowServices(false)}>Meetings</button>
+          </div>
+            <main>
+          {showServices ? <Services /> : <Meetings />}
+        </main>
+
+        <Outlet />
+      </div>
+
     </>
   )
-}))
+})
 export default Admin

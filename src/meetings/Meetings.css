@@ -1,13 +1,13 @@
-body {
-    background-color: #fffef4;
-
-}
-
 #meetings {
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
     background-color: #fffef4;
     position: fixed;
     top: 25vw;
-    left:10vw;
+    left:10vw; */
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 270px;
+    overflow-y: auto;
+    justify-content: center;
 }

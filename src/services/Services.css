@@ -1,6 +1,3 @@
-body{
-    background-color: #fffef4;
-}
 #add{
     position: fixed;
     bottom: 23vw;
@@ -12,11 +9,8 @@ body{
 #services{
     display: flex;
     flex-wrap: wrap;
-    /* margin-top: 20vw; */
-    background-color: #fffef4;
-    
-   position:relative;
-    top: 2vw;
-    left: 5vw;
-  
+    margin-top: 270px;
+  overflow-y: auto;
+  justify-content: center;
+
 }

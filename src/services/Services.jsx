@@ -7,18 +7,19 @@ import DialogActions from '@mui/material/DialogActions';
 import { useEffect } from "react";
 import { useState } from 'react';
 import Button from '@mui/material/Button';
-import TextField from '@mui/material/TextField'; 
+import TextField from '@mui/material/TextField';
 import Fab from '@mui/material/Fab';
 import './Services.css'
 import Service from '../service/Service';
 import ServicesStore from '../global/ServicesStore'
 import GlobalState from '../global/GlobalState';
+import Tooltip from '@mui/material/Tooltip';
 
 const Services = (observer(() => {
     useEffect(() => {
         ServicesStore.initServices()
 
-      }, []);
+    }, []);
 
     const [isOpen, setIsOpen] = useState(false);
     const [name, setName] = useState("");
@@ -44,12 +45,13 @@ const Services = (observer(() => {
             <div id='services'>
                 {ServicesStore.services.map((_, i) => <Service key={i} i={i} />)}
             </div>
+
             <Dialog open={isOpen} onClose={() => setIsOpen(false)}>
                 <DialogTitle>  Adding a service</DialogTitle>
                 <DialogContent>
                     <form onSubmit={handleSubmit} className="Form">
-                        <TextField  variant="standard" label="service name" onChange={(e) => setName(e.target.value)} /><br/>
-                        <TextField variant="standard" label="service description" onChange={(e) => setDescription(e.target.value)} /><br/>
+                        <TextField variant="standard" label="service name" onChange={(e) => setName(e.target.value)} /><br />
+                        <TextField variant="standard" label="service description" onChange={(e) => setDescription(e.target.value)} /><br />
                         <TextField variant="standard" label="service price" onChange={(e) => setPrice(e.target.value)} />
 
                     </form>
@@ -60,12 +62,13 @@ const Services = (observer(() => {
                 </DialogActions>
             </Dialog>
             {GlobalState.isAdmin ?
-           
-            <Fab onClick={() => setIsOpen(true)} aria-label="edit" id="add">
-            <AddIcon fontSize="large"/>
-          </Fab>:undefined
-             }
-            </>
+                <Tooltip title="Add Service">
+                    <Fab onClick={() => setIsOpen(true)} aria-label="edit" id="add">
+                        <AddIcon fontSize="large" />
+                    </Fab>
+                </Tooltip> : undefined
+            }
+        </>
     );
 
 }))
