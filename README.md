@@ -1,4 +1,4 @@
-# ⚛️ React Project
+# ⚛️ BusinessMeet – React App
 
 A React frontend application for demonstrating UI functionality.
 
